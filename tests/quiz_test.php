@@ -168,7 +168,7 @@ class tool_mergeusers_quiz_testcase extends advanced_testcase {
     public function test_mergeconflictingquizattempts() {
         global $DB;
 
-        $this->submit_quiz_attempt($this->quiz1, $this->user_keep, $this->get_fiftypercent_answers());
+        $this->submit_quiz_attempt($this->quiz1, $this->user_keep, $this->get_fiftypercent_answers(), 'mod_quiz\quiz_settings');
         $this->submit_quiz_attempt($this->quiz1, $this->user_remove, $this->get_hundredpercent_answers());
 
         // User to keep gets 50%, user to remove gets 100%.
