@@ -149,7 +149,7 @@ class tool_mergeusers_quiz_testcase extends advanced_testcase {
         $attempt = quiz_create_attempt($quizobj, 1, false, $timenow, false, $user->id);
         quiz_start_new_attempt($quizobj, $quba, $attempt, 1, $timenow);
         quiz_attempt_save_started($quizobj, $quba, $attempt);
-        $attemptobj = quiz_attempt::create($attempt->id);
+        $attemptobj = mod_quiz\quiz_attempt::create($attempt->id);
         $attemptobj->process_submitted_actions($timenow, false, $answers);
 
         $timefinish = time();
