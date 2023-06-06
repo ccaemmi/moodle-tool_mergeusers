@@ -22,6 +22,7 @@ require_once $CFG->dirroot . '/mod/quiz/lib.php';
 require_once $CFG->dirroot . '/mod/quiz/locallib.php';
 
 use mod_quiz\grade_calculator;
+use mod_quiz\quiz_settings;
 
 /**
  * TableMerger to process quiz_attempts table.
