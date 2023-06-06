@@ -218,8 +218,7 @@ class QuizAttemptsMerger extends GenericTableMerger
                     if ($attempt->userid != $toid) {
                         $sets[] = 'userid = ' . $toid;
                     }
-                    // $sets[] = 'attempt = ' . ($max + $nattempt);
-                    $sets[] = 'attempt = ' . $nattempt;
+                    $sets[] = 'attempt = ' . ($max + $nattempt);
 
                     $updateSql = $update[0] . implode(', ', $sets) . $update[1] . $attempt->id;
                     if ($DB->execute($updateSql)) {
