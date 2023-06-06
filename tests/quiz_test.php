@@ -212,6 +212,7 @@ class tool_mergeusers_quiz_testcase extends advanced_testcase {
         $this->assertEquals('100.00', $this->get_user_quiz_grade($this->user_keep, $this->quiz2, $this->course2));
 
         $user_remove = $DB->get_record('user', array('id' => $this->user_remove->id));
+        var_dump($user_remove->suspended);
         $this->assertEquals(1, $user_remove->suspended);
     }
 }
